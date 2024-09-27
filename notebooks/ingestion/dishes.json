@@ -1,0 +1,417 @@
+[
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/001%20Large.jpeg",
+        "contributor": "gautam",
+        "dish_name": "rajma chawal",
+        "location": "NJ",
+        "food_tags": "Indian",
+        "caption": "Beans with rice",
+        "constraint_id": 1,
+        "dish_id": 1,
+        "recipe_url": "https://www.tarladalal.com/rajma-chawal-punjabi-rajma-chawal-4951r",
+        "ingredients": [
+            {
+                "ingredient_name": "rajma"
+            },
+            {
+                "ingredient_name": "rice"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/002%20Large.jpeg",
+        "contributor": "gautam",
+        "dish_name": "paneer bhurji",
+        "location": "NJ",
+        "food_tags": "Indian",
+        "caption": "Scrambled cottage cheese with finely chopped onion, bell pepper and tomatoes",
+        "constraint_id": 2,
+        "dish_id": 2,
+        "recipe_url": "https://www.indianhealthyrecipes.com/paneer-bhurji-recipe/",
+        "ingredients": [
+            {
+                "ingredient_name": "cottage cheese"
+            },
+            {
+                "ingredient_name": "tomato"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/003%20Large.jpeg",
+        "contributor": "gautam",
+        "dish_name": "moong dal",
+        "location": "NJ",
+        "food_tags": "Indian",
+        "caption": "Yellow petite lentils",
+        "constraint_id": 3,
+        "dish_id": 3,
+        "recipe_url": "https://spicecravings.com/moong-dal",
+        "ingredients": [
+            {
+                "ingredient_name": "moong daal"
+            },
+            {
+                "ingredient_name": "green chilly"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/004%20Large.jpeg",
+        "contributor": "gautam",
+        "dish_name": "Butter chicken",
+        "location": "NJ",
+        "food_tags": "Indian",
+        "caption": "Chicken in Creamy tomato based gravy",
+        "constraint_id": 4,
+        "dish_id": 4,
+        "recipe_url": "https://www.indianhealthyrecipes.com/butter-chicken/",
+        "ingredients": [
+            {
+                "ingredient_name": "chicken"
+            },
+            {
+                "ingredient_name": "butter"
+            },
+            {
+                "ingredient_name": "cream"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_0898.jpeg",
+        "contributor": "gavin",
+        "dish_name": "porridge",
+        "location": "UK",
+        "food_tags": "Scottish",
+        "caption": "Porridge with fruits of the forrest, homemade granola, banana chips, and pumpkin seeds",
+        "constraint_id": 5,
+        "dish_id": 5,
+        "recipe_url": "https://www.kingshousehotel.co.uk/eat-drink/",
+        "ingredients": [
+            {
+                "ingredient_name": "granola"
+            },
+            {
+                "ingredient_name": "banana chips"
+            },
+            {
+                "ingredient_name": "pumpkin seeds"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_5728.jpeg",
+        "contributor": "gavin",
+        "dish_name": "baked potato",
+        "location": "UK",
+        "food_tags": "Scottish",
+        "caption": "Baked potato with Scottish Cheddar, Branston Pickles and a side salad of iceberg letture and cherry tomatoes ",
+        "constraint_id": 6,
+        "dish_id": 6,
+        "recipe_url": "https://aperturedata.io",
+        "ingredients": [
+            {
+                "ingredient_name": "potato"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_5743.jpeg",
+        "contributor": "gavin",
+        "dish_name": "haggis bonbons and steak and ale pie",
+        "location": "UK",
+        "food_tags": "Scottish",
+        "caption": "Haggis bonbons served with an apple puree, steak and ale pie served with chips",
+        "constraint_id": 7,
+        "dish_id": 7,
+        "recipe_url": "https://www.rowardennanhotel.co.uk/facilities",
+        "ingredients": [
+            {
+                "ingredient_name": "offal"
+            },
+            {
+                "ingredient_name": "beef"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_5786.jpeg",
+        "contributor": "gavin",
+        "dish_name": "butter chicken with special fried rice and assorted naan breads",
+        "location": "UK",
+        "food_tags": "Indian",
+        "caption": "Butter chicken, special fried rice, garlic naan, peshwari naan",
+        "constraint_id": 8,
+        "dish_id": 8,
+        "recipe_url": "https://www.tajmahal-oban.co.uk/",
+        "ingredients": [
+            {
+                "ingredient_name": "chicken"
+            },
+            {
+                "ingredient_name": "butter"
+            },
+            {
+                "ingredient_name": "wheat"
+            },
+            {
+                "ingredient_name": "rice"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_5812.jpeg",
+        "contributor": "gavin",
+        "dish_name": "duck breast and rump lamb",
+        "location": "UK",
+        "food_tags": "British",
+        "caption": "Pan fried duck breast, chump potato, roast candied beetroot, and port jus; roasted rosemary rump lamb, garlic crushed potatoes, hispy cabbage, and mint jus",
+        "constraint_id": 9,
+        "dish_id": 9,
+        "recipe_url": "https://www.kingshousehotel.co.uk/eat-drink/",
+        "ingredients": [
+            {
+                "ingredient_name": "duck"
+            },
+            {
+                "ingredient_name": "lamb"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_5815.jpeg",
+        "contributor": "gavin",
+        "dish_name": "traditional scottish and continental breakfast",
+        "location": "UK",
+        "food_tags": "Scottish",
+        "caption": "back bacon, scrambled eggs, potato scones, croissant, pain au chocolat, porridge with fruits of the forest and home-made granola",
+        "constraint_id": 10,
+        "dish_id": 10,
+        "recipe_url": "https://www.kingshousehotel.co.uk/eat-drink/",
+        "ingredients": [
+            {
+                "ingredient_name": "bacon",
+                "Unnamed: 7": "back bacon, scrambled eggs, potato scones, croissant, pain au chocolat, porridge with fruits of the forest and home-made granola"
+            },
+            {
+                "ingredient_name": "egg"
+            },
+            {
+                "ingredient_name": "granola"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_5819.jpeg",
+        "contributor": "gavin",
+        "dish_name": "won ton soup, chicken chow mein, katsu chicken",
+        "location": "UK",
+        "food_tags": "Chinese",
+        "caption": "won ton soup, chicken chow mein, katsu chicken with steamed rice",
+        "constraint_id": 11,
+        "dish_id": 11,
+        "recipe_url": "https://g.co/kgs/UkWnD6p",
+        "ingredients": [
+            {
+                "ingredient_name": "chicken"
+            },
+            {
+                "ingredient_name": "noodles"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/IMG_0674.jpeg",
+        "contributor": "gavin",
+        "dish_name": "egg on toast",
+        "location": "UK",
+        "food_tags": "British",
+        "caption": "scrambled egg on brown toast, garnished with chives",
+        "constraint_id": 12,
+        "dish_id": 12,
+        "recipe_url": "https://aperturedata.io",
+        "ingredients": [
+            {
+                "ingredient_name": "egg"
+            },
+            {
+                "ingredient_name": "bread"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/20240730_151208.jpg",
+        "contributor": "drew",
+        "dish_name": "vegetable tian with noodles",
+        "location": "MD",
+        "food_tags": "French",
+        "caption": "sauteed eggplant, tomato, zuchinni",
+        "constraint_id": 13,
+        "dish_id": 13,
+        "recipe_url": "https://www.simplefrenchcooking.com/recipe-entry/vegetable-tian",
+        "ingredients": [
+            {
+                "ingredient_name": "eggplant"
+            },
+            {
+                "ingredient_name": "noodles"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/20240730_161426.jpg",
+        "contributor": "drew",
+        "dish_name": "vegetable tian with noodles",
+        "location": "MD",
+        "food_tags": "French",
+        "caption": "eggplant, tomato, zuchinni in noodles with feta cheese",
+        "constraint_id": 14,
+        "dish_id": 14,
+        "recipe_url": "https://www.simplefrenchcooking.com/recipe-entry/vegetable-tian",
+        "ingredients": [
+            {
+                "ingredient_name": "eggplant"
+            },
+            {
+                "ingredient_name": "noodles"
+            },
+            {
+                "ingredient_name": "feta cheese"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/ramen.jpg",
+        "contributor": "Jiyoung",
+        "dish_name": "negi miso ramen",
+        "location": "CA",
+        "food_tags": "Japanese",
+        "caption": "green onion, bean sprouts, pork, noodles",
+        "constraint_id": 15,
+        "dish_id": 15,
+        "recipe_url": "https://japan.recipetineats.com/home-made-miso-ramen/",
+        "ingredients": [
+            {
+                "ingredient_name": "green onion",
+                "Unnamed: 7": "green onion, bean sprouts, pork, noodles"
+            },
+            {
+                "ingredient_name": "bean sprouts"
+            },
+            {
+                "ingredient_name": "pork"
+            },
+            {
+                "ingredient_name": "noodles"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/salmonsteak.jpg",
+        "contributor": "Jiyoung",
+        "dish_name": "salmon steak",
+        "location": "NV",
+        "food_tags": "Italian",
+        "caption": "salmon, white beans",
+        "constraint_id": 16,
+        "dish_id": 16,
+        "recipe_url": "https://eatsmarter.com/recipes/salmon-with-asparagus-and-white-beans",
+        "ingredients": [
+            {
+                "ingredient_name": "salmon"
+            },
+            {
+                "ingredient_name": "white beans"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/SaltandPepperLobster.jpg",
+        "contributor": "Jiyoung",
+        "dish_name": "Salt and Pepper Lobster",
+        "location": "HI",
+        "food_tags": "Chinese",
+        "caption": "fried lobster",
+        "constraint_id": 17,
+        "dish_id": 17,
+        "recipe_url": "https://missadventureathome.blogspot.com/2009/09/salt-and-pepper-lobster.html",
+        "ingredients": [
+            {
+                "ingredient_name": "lobster"
+            },
+            {
+                "ingredient_name": "butter"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/sushi.jpg",
+        "contributor": "Jiyoung",
+        "dish_name": "sushi",
+        "location": "CA",
+        "food_tags": "Japanese",
+        "caption": "nigiri sushi",
+        "constraint_id": 18,
+        "dish_id": 18,
+        "recipe_url": "https://www.masterclass.com/articles/nigiri-recipe",
+        "ingredients": [
+            {
+                "ingredient_name": "salmon"
+            },
+            {
+                "ingredient_name": "tuna"
+            },
+            {
+                "ingredient_name": "rice"
+            },
+            {
+                "ingredient_name": "seaweed"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/wafflensmoothie.jpg",
+        "contributor": "Jiyoung",
+        "dish_name": "waffle, smoothie",
+        "location": "CA",
+        "food_tags": "American",
+        "caption": "waffle, smoothie",
+        "constraint_id": 19,
+        "dish_id": 19,
+        "recipe_url": "https://www.tasteandtellblog.com/waffles/",
+        "ingredients": [
+            {
+                "ingredient_name": "all-purpose flour"
+            },
+            {
+                "ingredient_name": "egg"
+            },
+            {
+                "ingredient_name": "milk"
+            }
+        ]
+    },
+    {
+        "url": "https://github.com/aperture-data/Cookbook/blob/0e01a8dca2a995e311508ddbf10a9de13c67bb9b/images/AvocadoQuinoaSuperfoodEnsalada.jpg",
+        "contributor": "Jiyoung",
+        "dish_name": "Avocado quinoa salad",
+        "location": "CA",
+        "food_tags": "American",
+        "caption": "salad, sandwich, chicken tenders",
+        "constraint_id": 20,
+        "dish_id": 20,
+        "recipe_url": "https://www.nutritionbymeagan.com/post/medocino-farms-copycat-avocado-and-crispy-quinoa-ensalada",
+        "ingredients": [
+            {
+                "ingredient_name": "avocado"
+            },
+            {
+                "ingredient_name": "lettuce"
+            },
+            {
+                "ingredient_name": "quinoa"
+            }
+        ]
+    }
+]
