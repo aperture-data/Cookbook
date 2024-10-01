@@ -1,42 +1,50 @@
-from pandas import read_csv
-import os
+from pandas import read_csv, Series
 import json
-
-DISHES_CSV_PATH = "../images.adb.csv"
-INGREDIENTS_CSV_PATH = "../ingredients.csv"
-
-print(os.getcwd())
-dishes = read_csv(DISHES_CSV_PATH)
-ingredients = read_csv(INGREDIENTS_CSV_PATH)
-
-json_rep = json.loads(dishes.to_json(orient="records"))
-
-def remove_extra(selected):
-    for ing in selected:
-        extra = ["id",
-                "name",
-                "filename"]
-        [ing.pop(k) for k in extra if k in ing]
-        for k in ing.copy():
-            if not ing[k]:
-                ing.pop(k)
-    return selected.copy()
-
+import math
 
 if __name__ == "__main__":
-    tweaked = []
-    for dish in json_rep:
-        dkv = dish.copy()
-        dkv["dish_id"] = dkv.pop("id")
-        dkv["recipe_url"] = dkv.pop("Recipe URL")
-        try:
-            selected = ingredients[ingredients["id"] == dkv["dish_id"]].to_json(orient="records")
-            selected = json.loads(selected)
-            selected = remove_extra(selected)
-            dkv["ingredients"] = selected
-            tweaked.append(dkv)
-        except Exception as e:
-            print(e)
+    sheet_id = "1G1HPG3Dxx5W39OD6b74wMHvWupD7N-DLUbV7tD5owx8"
+    sheet_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet="
 
-    json.dump(tweaked, open("dishes.json", "w"), indent=4)
-    print("Written to dishes.json")
+    sheet_names = ["Dishes", "Dish_Ingredients","Ingredients"]
+    dishes, dish_ingredients, ingredients = [read_csv(f"{sheet_url}{sheet_name}").dropna(how="all", axis="columns") for sheet_name in sheet_names]
+
+    combined = dishes.merge(
+        dish_ingredients,
+        on="id",
+        how="left").merge(
+            ingredients,
+            left_on="ingredient_name",
+            right_on="Name").rename({
+                "Recipe URL": "recipe_url",
+            }, axis="columns")
+    combined["dish_id"] = combined.pop("id")
+    combined["url"] = combined.pop("filename").apply(lambda x: f"https://raw.githubusercontent.com/aperture-data/Cookbook/refs/heads/main/images/{x}")
+
+
+    def dish_ingredients_aggregator(g):
+        return Series({
+            "ingredients": g[["Name", "other_names", "category",
+                            "subgroup", "macronutrient", "micronutrient"]].to_dict(orient="records", ),
+        })
+
+    combined = combined.groupby(["dish_id",
+        "url",
+        "type",
+        "location",
+        "cuisine",
+        "recipe_url",
+        "contributor",
+        "caption",
+        "name"]).apply(dish_ingredients_aggregator).reset_index()
+
+    dishes = combined.to_dict(orient="records")
+
+    for dish in dishes:
+        for ing in dish["ingredients"]:
+            for k in ing.copy():
+                if not isinstance(ing[k], str) and math.isnan(ing[k]):
+                    ing.pop(k)
+
+    with open("dishes.json", "w") as f:
+        f.write(json.dumps(dishes, indent=2))
