@@ -11,8 +11,7 @@ python convert_ingredients_adb_csv.py
 # OpenAI CLIP model for generating embeddings.
 pip install git+https://github.com/openai/CLIP.git
 
-adb ingest from-csv dishes.adb.csv --ingest-type IMAGE  --transformer common_properties --transformer image_properties --transformer clip_pytorch_embeddings
-adb ingest from-csv ingredients.adb.csv --ingest-type ENTITY
-adb ingest from-csv dish_ingredients.adb.csv --ingest-type CONNECTION
+#facenet-pytorch for running ingest pipeline with transformers.
+pip install facenet-pytorch --no-deps
 
 cd -
