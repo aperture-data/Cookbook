@@ -11,9 +11,9 @@ if __name__ == "__main__":
     ingredients = ingredients[ingredient_columns]
     ingredients = ingredients.assign(EntityClass="Ingredient")
 
-    ingredients["UUID"] = [uuid4().hex for _ in range(len(ingredients))]
-    ingredients = ingredients[["EntityClass", "UUID"] + ingredient_columns]
-    ingredients["constraint_UUID"] = ingredients["UUID"]
+
+    ingredients = ingredients[["EntityClass"] + ingredient_columns]
+    ingredients["constraint_Name"] = ingredients["Name"]
     ingredients.to_csv("ingredients.adb.csv", index=False)
     print("Written to ingredients.adb.csv")
 
@@ -25,8 +25,8 @@ if __name__ == "__main__":
 
     di = read_csv(f"{sheet_url}Dish_Ingredients").dropna(how="all", axis="columns")
     joins = dishes[["id"]].merge(di, on="id", how="left").merge(ingredients, left_on="ingredient_name", right_on="Name")
-    joins = joins.rename(columns={"id": "_Image@id", "UUID": "Ingredient@UUID"})
+    joins = joins.rename(columns={"id": "_Image@id", "Name": "Ingredient@Name"})
     joins = joins.assign(ConnectionClass="HasIngredient")
-    joins = joins[['ConnectionClass', '_Image@id', 'Ingredient@UUID']]
+    joins = joins[['ConnectionClass', '_Image@id', 'Ingredient@Name']]
     joins.to_csv("dish_ingredients.adb.csv", index=False)
     print("Written to dish_ingredients.adb.csv")
