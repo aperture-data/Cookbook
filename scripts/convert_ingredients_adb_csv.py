@@ -27,6 +27,8 @@ if __name__ == "__main__":
     joins = dishes[["id"]].merge(di, on="id", how="left").merge(ingredients, left_on="ingredient_name", right_on="Name")
     joins = joins.rename(columns={"id": "_Image@id", "Name": "Ingredient@Name"})
     joins = joins.assign(ConnectionClass="HasIngredient")
-    joins = joins[['ConnectionClass', '_Image@id', 'Ingredient@Name']]
+    joins["connection_id"] = joins.apply(lambda row: f"{row['_Image@id']}_{row['Ingredient@Name']}", axis=1)
+    joins["constraint_connection_id"] = joins["connection_id"]
+    joins = joins[['ConnectionClass', '_Image@id', 'Ingredient@Name', "connection_id", "constraint_connection_id"]]
     joins.to_csv("dish_ingredients.adb.csv", index=False)
     print("Written to dish_ingredients.adb.csv")
