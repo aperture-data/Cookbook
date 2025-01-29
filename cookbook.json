@@ -1,0 +1,86 @@
+{
+    "@type": "sc:Dataset",
+    "name": "cooking_with_aperturedb",
+    "description": "A small collection of recipes for demonstration of ApertureDB.",
+    "license": "https://opensource.org/license/mit",
+    "url": "https://aperture-data.github.io/Cookbook/",
+    "distribution": [
+        {
+            "@type": "cr:FileObject",
+            "@id": "recipes.csv",
+            "name": "recipes.csv",
+            "contentUrl": "recipes.csv",
+            "encodingFormat": "text/csv",
+            "sha256": "a981c3d1ae2daef77df2d8813badb36ba939c3c3f052072c57cc5c34f6767473"
+        },
+        {
+            "@type": "cr:FileObject",
+            "@id": "ingredients2.csv",
+            "name": "ingredients2.csvv",
+            "contentUrl": "ingredients2.csv",
+            "encodingFormat": "text/csv",
+            "sha256": "73ae3e701b23a82438fcdceefdf193e6bc68ca34d6287be7254c3579445f9f71"
+        },
+        {
+            "@id": "images",
+            "@type": "cr:FileSet",
+            "containedIn": {
+                "@id": "images.adb.csv"
+            },
+            "includes": "*.jp*g",
+            "encodingFormat": "image/jpeg"
+        }
+    ],
+    "recordSet": [
+        {
+            "@type": "cr:RecordSet",
+            "name": "recipes",
+            "description": "Records extracted from the images.adb table, with their schema.",
+            "field": [
+                {
+                    "@id": "images/image_content",
+                    8 " @type ": "cr: Field ",
+                    9 " dataType ": "sc: ImageObject ",
+                    10 " source ": {
+                        11 " fileSet ": {
+                            " @id ": "image-files"
+                        },
+                        12 " extract ": {
+                            " fileProperty ": " content "
+                        }
+13
+                    }
+14
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "url",
+                    "description": "The first column contains the name.",
+                    "dataType": "sc:Text",
+                    "references": {
+                        "fileObject": {
+                            "@id": "minimal.csv"
+                        },
+                        "extract": {
+                            "column": "name"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "age",
+                    "description": "The second column contains the age.",
+                    "dataType": "sc:Integer",
+                    "references": {
+                        "fileObject": {
+                            "@id": "minimal.csv"
+                        },
+                        "extract": {
+                            "column": "age"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
