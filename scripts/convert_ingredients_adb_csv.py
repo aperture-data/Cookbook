@@ -25,10 +25,10 @@ if __name__ == "__main__":
 
     di = read_csv(f"{sheet_url}Dish_Ingredients").dropna(how="all", axis="columns")
     joins = dishes[["id"]].merge(di, on="id", how="left").merge(ingredients, left_on="ingredient_name", right_on="Name")
-    joins = joins.rename(columns={"id": "_Image@id", "Name": "Ingredient@Name"})
+    joins = joins.rename(columns={"id": "image:Images@id", "Name": "entity:Ingredient@Name"})
     joins = joins.assign(ConnectionClass="HasIngredient")
-    joins["connection_id"] = joins.apply(lambda row: f"{row['_Image@id']}_{row['Ingredient@Name']}", axis=1)
+    joins["connection_id"] = joins.apply(lambda row: f"{row['image:Images@id']}_{row['entity:Ingredient@Name']}", axis=1)
     joins["constraint_connection_id"] = joins["connection_id"]
-    joins = joins[['ConnectionClass', '_Image@id', 'Ingredient@Name', "connection_id", "constraint_connection_id"]]
+    joins = joins[['ConnectionClass', 'image:Images@id', 'entity:Ingredient@Name', "connection_id", "constraint_connection_id"]]
     joins.to_csv("dish_ingredients.adb.csv", index=False)
     print("Written to dish_ingredients.adb.csv")
