@@ -165,7 +165,7 @@ class NotebookRunner:
         utils = Utils(client)
         run_id = "sparql-notebook-" + uuid.uuid4().hex
         scope = ["$documentation_run", "==", run_id]
-        definitions = utils.get_indexes(target="descriptor", class_name="ViT-B/16", kind="vector")
+        definitions = utils.get_indexes(target="descriptor", class_name="ViT-B/16", property_key="_blob")
         created = not definitions
         try:
             if created:
