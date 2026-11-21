@@ -24,7 +24,7 @@ Develop and pull request builds validate the image without publishing it.
 
 ## Server compatibility
 
-These examples require ApertureDB server 1.0 and Python SDK `aperturedb>=1.0.1,<2`.
+These examples require ApertureDB server 1.0 and Python SDK `aperturedb>=1.0.2,<2`.
 Media additions use explicit application classes. Descriptor search spaces use
 descriptor classes with native vector indexes.
 
@@ -33,7 +33,7 @@ descriptor classes with native vector indexes.
 Run all 23 notebooks against an empty, disposable server 1.0 instance:
 
 ```bash
-python -m pip install 'aperturedb>=1.0.1,<2' ipython pandas pillow requests rdflib pypdf
+python -m pip install 'aperturedb>=1.0.2,<2' ipython pandas pillow requests rdflib pypdf
 python scripts/test_server1_notebooks.py --port 55555
 ```
 
