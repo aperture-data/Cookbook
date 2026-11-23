@@ -242,7 +242,8 @@ class NotebookRunner:
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("notebooks", nargs="*", choices=NOTEBOOKS)
+    parser.add_argument("notebooks", nargs="*", metavar="NOTEBOOK",
+                        help="Notebook names to run (default: all notebooks)")
     parser.add_argument("--port", type=int, help="Native port of an empty disposable local server")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--username", default="admin")
@@ -252,6 +253,9 @@ def main(argv=None):
     parser.add_argument("--pdf-text-fixture", type=Path,
                         help="Optional text extracted locally from ButterChicken.pdf; otherwise pypdf is required")
     args = parser.parse_args(argv)
+    for name in args.notebooks:
+        if name not in NOTEBOOKS:
+            parser.error(f"Unknown notebook {name!r}. Choose from {', '.join(NOTEBOOKS)}")
     if args.port is not None:
         if not 1 <= args.port <= 65535:
             parser.error("--port must be between 1 and 65535")

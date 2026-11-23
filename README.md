@@ -24,8 +24,8 @@ Develop and pull request builds validate the image without publishing it.
 
 ## Server compatibility
 
-Release 0.2.3 updates the 23 Cookbook notebooks to install Python SDK
-`aperturedb>=1.0.2,<2` for ApertureDB server 1.0.
+The Cookbook notebooks install `aperturedb>=1.0.3,<2` from PyPI
+for use with ApertureDB server 1.0.
 Media additions use explicit application classes. Descriptor search spaces use
 descriptor classes with native vector indexes.
 
@@ -34,7 +34,7 @@ descriptor classes with native vector indexes.
 Run all 23 notebooks against an empty, disposable server 1.0 instance:
 
 ```bash
-python -m pip install 'aperturedb>=1.0.2,<2' ipython pandas pillow requests rdflib pypdf
+python -m pip install 'aperturedb>=1.0.3,<2' ipython pandas pillow requests rdflib pypdf
 python scripts/test_server1_notebooks.py --port 55555
 ```
 
