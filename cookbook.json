@@ -3,7 +3,7 @@
     "name": "cooking_with_aperturedb",
     "description": "A small collection of recipes for demonstration of ApertureDB.",
     "license": "https://opensource.org/license/mit",
-    "url": "https://aperture-data.github.io/Cookbook/",
+    "url": "https://github.com/aperture-data/Cookbook/tree/croissant",
     "distribution": [
         {
             "@type": "cr:FileObject",
